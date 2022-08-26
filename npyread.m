@@ -20,7 +20,7 @@ try
         data = fread(fid, prod(shape)*2, 'double=>double');
         data = data(1:2:end) + 1j * data(2:2:end);
     else
-        data = fread(fid, prod(shape), [info.DataType '=>' info.DataType.DataType]);
+        data = fread(fid, prod(shape), [info.DataType '=>' info.DataType]);
     end
 
     if length(shape)>1 && ~info.FortranOrder
